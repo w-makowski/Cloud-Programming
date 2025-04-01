@@ -1,0 +1,52 @@
+
+<section class="page-header">
+    <div class="page-header__content">
+        <h1>Skontaktuj się ze mną</h1>
+        <p>Chętnie odpowiem na Twoje pytania</p>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="contact__container">
+        <div class="contact__info">
+            <h2>Informacje kontaktowe</h2>
+            <p>Skorzystaj z poniższego formularza lub skontaktuj się ze mną bezpośrednio:</p>
+            <ul class="contact__info-list">
+                <li><i class="fas fa-map-marker-alt"></i> Wrocław, Polska</li>
+                <li><i class="fas fa-phone"></i> +48 123 456 789</li>
+                <li><i class="fas fa-envelope"></i> kontakt@jankowalski.pl</li>
+            </ul>
+            <div class="contact__info-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        
+        <div class="contact__form-container">
+            <h2>Wyślij wiadomość</h2>
+            <form class="contact__form" action="/submit-form" method="POST">
+                <div class="form-group">
+                    <label for="name">Twoje imię</label>
+                    <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Twój email</label>
+                    <input type="email" id="email" name="email" placeholder="Adres email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Temat</label>
+                    <input type="text" id="subject" name="subject" placeholder="Temat wiadomości">
+                </div>
+                <div class="form-group">
+                    <label for="message">Treść wiadomości</label>
+                    <textarea id="message" name="message" placeholder="Twoja wiadomość" required></textarea>
+                </div>
+                <button type="submit" class="button button--primary">Wyślij wiadomość</button>
+            </form>
+        </div>
+    </div>
+</section>
+

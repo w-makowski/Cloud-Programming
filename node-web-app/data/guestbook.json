@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Krzysztof Jarzyna",
+    "email": "jarzynazeszczecina@example.com",
+    "message": "TOP",
+    "rating": 5,
+    "date": "1.04.2025"
+  },
+  {
+    "name": "Jan Kowalski",
+    "email": "jankowalski@example.com",
+    "message": "Dobra stronka!",
+    "rating": 4,
+    "date": "31.03.2025"
+  }
+]

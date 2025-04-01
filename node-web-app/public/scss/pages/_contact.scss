@@ -1,0 +1,127 @@
+
+.contact {
+    @include section-padding;
+    background-color: $light-color;
+    
+    &__container {
+        @include container;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        
+        @include respond-to(lg) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+    
+    &__info {
+        background-color: white;
+        padding: 30px;
+        border-radius: $border-radius;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        h2 {
+            margin-bottom: 20px;
+            color: $primary-color;
+        }
+
+        p {
+            color: $text-color;
+            margin-bottom: 20px;
+        }
+        
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+
+                i {
+                    font-size: 1.5rem;
+                    color: $primary-color;
+                }
+            }
+        }
+      
+        &-social {
+            @include flex(row, flex-start, center);
+            gap: 15px;
+            margin-top: 30px;
+            
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                color: white;
+                @include flex;
+                font-size: 1.2rem;
+                transition: background-color $transition-speed ease;
+                
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    &__form-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: $border-radius;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        h2 {
+            color: $primary-color;
+        }
+    }
+    
+    &__form {
+        background-color: white;
+        padding: 30px;
+        border-radius: $border-radius;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        
+        .form-group {
+            margin-bottom: 20px;
+            
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+            
+            input, textarea {
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: $border-radius;
+                font-size: 1rem;
+                font-family: inherit;
+                transition: border-color $transition-speed ease;
+            
+                &:focus {
+                    outline: none;
+                    border-color: $primary-color;
+                }
+            }
+            
+            textarea {
+                height: 150px;
+                resize: vertical;
+            }
+        }
+        
+        button {
+            width: 100%;
+        }
+    }
+}

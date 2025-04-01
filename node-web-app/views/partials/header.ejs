@@ -1,0 +1,16 @@
+<nav class="main-nav">
+    <div class="main-nav__container">
+        <a href="/" class="main-nav__logo">Jan<span>Kowalski</span></a>
+        <ul class="main-nav__menu">
+            <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Strona główna</a></li>
+            <li><a href="/about" class="<%= path === '/about' ? 'active' : '' %>">O mnie</a></li>
+            <li><a href="/services" class="<%= path === '/services' ? 'active' : '' %>">Oferta</a></li>
+            <li><a href="/gallery" class="<%= path === '/gallery' ? 'active' : '' %>">Galeria</a></li>
+            <li><a href="/guestbook" class="<%= path === '/guestbook' ? 'active' : '' %>">Księga gości</a></li>
+            <li><a href="/contact" class="<%= path === '/contact' ? 'active' : '' %>">Kontakt</a></li>
+        </ul>
+        <div class="main-nav__toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>

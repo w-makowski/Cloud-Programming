@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $background-color;
+}
+  
+a {
+    text-decoration: none;
+    color: $primary-color;
+    transition: color $transition-speed ease;
+    
+    &:hover {
+      color: darken($primary-color, 15%);
+    }
+}
+  
+ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+  
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    
+    &:after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: $primary-color;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+  
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: $border-radius;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all $transition-speed ease;
+    border: none;
+    
+    &--primary {
+        background-color: $primary-color;
+        color: white;
+        
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            color: white;
+        }
+    }
+    
+    &--secondary {
+        background-color: $secondary-color;
+        color: white;
+        
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+            color: white;
+        }
+    }
+    
+    &--outline {
+        background-color: transparent;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+}
+

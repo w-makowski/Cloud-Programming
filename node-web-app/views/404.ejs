@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title><%= title %></title>
-    </head>
-    <body>
-        <h1>Zgubiłeś sie????</h1>
-    </body>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || "Błąd 404" %></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <h2>Ups! Zgubiłeś się?</h2>
+        <p>Strona, której szukasz, nie istnieje lub została przeniesiona.</p>
+        <a href="/" class="error-btn">Powrót na stronę główną</a>
+    </div>
+</body>
 </html>

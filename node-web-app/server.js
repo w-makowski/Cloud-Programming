@@ -1,3 +1,6 @@
+// for serverless only:
+// const serverless = require('serverless-http');
+
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -18,6 +21,9 @@ app.use(bodyParser.json());
 
 // Ustawienie silnika szablonów EJS
 app.set('view engine', 'ejs');
+
+// for serverless only:
+// app.set('views', path.join(__dirname, 'views'));
 
 // Middleware do przekazywania aktualnej ścieżki do szablonów
 app.use((req, res, next) => {
@@ -109,12 +115,6 @@ app.post('/submit-guestbook', (req, res) => {
     });
 });
 
-// // Obsługa formularza księgi gości
-// app.post('/submit-guestbook', (req, res) => {
-//     console.log('Otrzymano wpis do księgi gości:', req.body);
-//     res.redirect('/guestbook');
-// });
-
 app.put('/user', (req, res) => {
     res.send('Got a PUT request at /user');
 });
@@ -131,7 +131,11 @@ app.use((req, res, next) => {
 });
 
 
+// for serverless only:
+// module.exports.handler = serverless(app);
+
 // Start serwera
+// comment those lines if you want to start it serverless:
 app.listen(port, () => {
     console.log(`Aplikacja nasłuchuje na porcie ${port}`);
 });

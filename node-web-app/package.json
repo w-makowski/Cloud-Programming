@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "sass public/scss/style.scss public/css/style.css",
-    "watch-css": "sass --watch public/scss/style.scss:public/css/style.css"
+    "watch-css": "sass --watch public/scss/style.scss:public/css/style.css",
+    "start": "serverless offline start",
+    "deploy": "serverless deploy"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +17,12 @@
     "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "serverless": "^4.10.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
-    "sass": "^1.86.0"
+    "sass": "^1.86.0",
+    "serverless-offline": "^14.4.0"
   }
 }

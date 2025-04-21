@@ -1,0 +1,17 @@
+{
+  "name": "spa-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass styles/scss/style.scss styles/css/style.css",
+    "watch-css": "sass --watch styles/scss/style.scss:styles/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  }
+}

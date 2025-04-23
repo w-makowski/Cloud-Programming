@@ -11,6 +11,16 @@ function OnStartUp() {
 
 OnStartUp();
 
+let recaptchaWidgetId;
+
+function onRecaptchaLoadCallback() {
+    if (document.querySelector('.g-recaptcha')) {
+        recaptchaWidgetId = grecaptcha.render(document.querySelector('.g-recaptcha'), {
+            sitekey: "6Lcf0yErAAAAAJAkUPhJUYnKwd97fBL4rHSrES1A"
+        });
+    }
+}
+
 document.querySelector('#about-link').addEventListener('click', (event) => {
     let stateObj = { page: 'about' };
     document.title = 'About';
@@ -151,7 +161,7 @@ function RenderContactPage() {
         
         <div class="contact__form-container">
             <h2>Wyślij wiadomość</h2>
-            <form class="contact__form" action="/submit-form" method="POST">
+            <form id="contact-form" class="contact__form">
                 <div class="form-group">
                     <label for="name">Twoje imię</label>
                     <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required>
@@ -165,7 +175,7 @@ function RenderContactPage() {
                     <textarea id="message" name="message" placeholder="Twoja wiadomość" required></textarea>
                 </div>
 
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                <div class="g-recaptcha"></div>
 
                 <button type="submit" class="button button--primary">Wyślij wiadomość</button>
             </form>
@@ -175,6 +185,8 @@ function RenderContactPage() {
     `;
 
     setTimeout(() => {
+        onRecaptchaLoadCallback();
+
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', handleContactFormSubmit);

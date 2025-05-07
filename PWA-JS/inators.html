@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inatory - Doofenshmirtz Evil Inc.</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- PWA Meta Tagi -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-icon-180.png">
+
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#db4938">
+    <meta name="apple-mobile-web-app-title" content="Evil Inc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Apple Splash Screens -->
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1640-2360.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2360-1640.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1488-2266.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2266-1488.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1320-2868.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2868-1320.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1206-2622.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2622-1206.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="main-nav__container">
+          <a href="index.html" class="main-nav__logo">Doofenshmirtz <span>Evil Inc.</span></a>
+          
+          <button class="main-nav__menu-toggle" aria-label="Menu">
+            <p>Menu</p>
+            <!-- <i class="fas fa-bars"></i> -->
+          </button>
+          
+          <div class="main-nav__menu-wrapper">
+            <button class="main-nav__close" aria-label="Zamknij menu">
+              <!-- <i class="fas fa-times"></i> -->
+               <p>X</p>
+            </button>
+            
+            <ul class="main-nav__menu">
+              <li><a href="index.html" class="active">Strona główna</a></li>
+              <li><a href="about.html">O nas</a></li>
+              <li><a href="inators.html">Inatory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-nav__overlay"></div>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header__container">
+            <h1 class="page-header__title">Nasze -Inatory</h1>
+            <p class="page-header__description">
+                Odkryj najbardziej zaawansowane technologicznie urządzenia stworzone przez Dr. Heinza Doofenshmirtza.
+            </p>
+        </div>
+    </header>
+
+    <section class="inators-hero">
+        <div class="inators-hero__container">
+            <h2 class="section-title">Siej zło we własnym domu</h2>
+            <p class="inators-hero__description">
+                Każdy -Inator jest wyjątkowy i zaprojektowany, aby pomóc w przejęciu kontroli nad Okręgiem Trzech Stanów
+                lub rozwiązać osobiste problemy Dr. Doofenshmirtza. Wszystkie nasze produkty są wyposażone w przycisk autodestrukcji
+                i gwarancję złowrogich zamiarów.
+            </p>
+        </div>
+    </section>
+
+    <section class="inators">
+        <div class="inators__container">
+            <div class="inators-grid">
+                <!-- Inator 1 -->
+                <div id="teleport-inator" class="inator-card inator-card--transportation">
+                    <div class="inator-card__header">
+                        <h3 class="inator-card__title">Przenoszator</h3>
+                        <span class="inator-card__category">Transport</span>
+                    </div>
+                    <div class="inator-card__image inator-card__image--teleport"></div>
+                    <p class="inator-card__description">
+                        Teleportuje przedmioty z jednego miejsca do drugiego. Idealny do kradzieży
+                        smacznych ciast z piekarni bez konieczności wychodzenia z domu!
+                    </p>
+                    <div class="inator-card__features">
+                        <div class="inator-card__feature">Zasięg do 5 km</div>
+                        <div class="inator-card__feature">Wbudowany system celowania</div>
+                        <div class="inator-card__feature">Pracuje na bateriach (baterie nie są dołączone)</div>
+                    </div>
+                    <div class="inator-card__footer">
+                        <span class="inator-card__price">9999 złotych</span>
+                        <a href="#" class="button button--secondary button--small">Dodaj do koszyka</a>
+                    </div>
+                </div>
+                
+                <!-- Inator 2 -->
+                <div id="disappear-inator" class="inator-card inator-card--transformation">
+                    <div class="inator-card__header">
+                        <h3 class="inator-card__title">Znikator</h3>
+                        <span class="inator-card__category">Transformacja</span>
+                    </div>
+                    <div class="inator-card__image inator-card__image--disappear" ></div>
+                    <p class="inator-card__description">
+                        Sprawia, że rzeczy znikają! Niestety czasami trudno je odnaleźć później, więc
+                        zaleca się robienie notatek o tym, co zostało zniknięte.
+                    </p>
+                    <div class="inator-card__features">
+                        <div class="inator-card__feature">Działa na wszystkie obiekty (poza Agentem P)</div>
+                        <div class="inator-card__feature">Obsługuje przedmioty do 100 kg</div>
+                        <div class="inator-card__feature">Nie gwarantujemy odzyskania zaginionych przedmiotów</div>
+                    </div>
+                    <div class="inator-card__footer">
+                        <span class="inator-card__price">7999 złotych</span>
+                        <a href="#" class="button button--secondary button--small">Dodaj do koszyka</a>
+                    </div>
+                </div>
+                
+                <!-- Inator 3 -->
+                <div id="giant-inator" class="inator-card inator-card--transformation">
+                    <div class="inator-card__header">
+                        <h3 class="inator-card__title">Wielkoinator</h3>
+                        <span class="inator-card__category">Transformacja</span>
+                    </div>
+                    <div class="inator-card__image inator-card__image--giant"></div>
+                    <p class="inator-card__description">
+                        Powiększa przedmioty do gigantycznych rozmiarów! Próbowałeś kiedyś walczyć z 
+                        gigantycznym pączkiem? To prawdziwe wyzwanie!
+                    </p>
+                    <div class="inator-card__features">
+                        <div class="inator-card__feature">Regulowana skala powiększenia (do 100x)</div>
+                        <div class="inator-card__feature">Możliwość cofnięcia efektu</div>
+                        <div class="inator-card__feature">Nie używać na kretach</div>
+                    </div>
+                    <div class="inator-card__footer">
+                        <span class="inator-card__price">12999 złotych</span>
+                        <a href="#" class="button button--secondary button--small">Dodaj do koszyka</a>
+                    </div>
+                </div>
+                
+                <!-- Inator 4 -->
+                <div id="mind-control-inator" class="inator-card inator-card--mind-control">
+                    <div class="inator-card__header">
+                        <h3 class="inator-card__title">Kontrolator umysłu</h3>
+                        <span class="inator-card__category">Kontrola umysłu</span>
+                    </div>
+                    <div class="inator-card__image inator-card__image--mindcontrol"></div>
+                    <p class="inator-card__description">
+                        Pozwala kontrolować umysły innych ludzi! Świetny do przekonywania 
+                        mieszkańców Okręgu Trzech Stanów, aby ogłosili cię swoim przywódcą.
+                    </p>
+                    <div class="inator-card__features">
+                        <div class="inator-card__feature">Działa na wszystkich (poza starszymi braćmi)</div>
+                        <div class="inator-card__feature">Zasięg do 1 km</div>
+                        <div class="inator-card__feature">Wymaga czapki kontroli umysłu (sprzedawana oddzielnie)</div>
+                    </div>
+                    <div class="inator-card__footer">
+                        <span class="inator-card__price">15999 złotych</span>
+                        <a href="#" class="button button--secondary button--small">Dodaj do koszyka</a>
+                    </div>
+                </div>
+                
+                <!-- Inator 5 -->
+                <div id="destruction-inator" class="inator-card inator-card--destruction">
+                    <div class="inator-card__header">
+                        <h3 class="inator-card__title">Niszczator</h3>
+                        <span class="inator-card__category">Destrukcja</span>
+                    </div>
+                    <div class="inator-card__image inator-card__image--destruction"></div>
+                    <p class="inator-card__description">
+                        Niszczy wszystko, co znajdzie się na jego drodze! Bardzo przydatny, gdy ktoś 
+                        zajął twoje miejsce parkingowe lub gdy brat Roger coś wygrał.
+                    </p>
+                    <div class="inator-card__features">
+                        <div class="inator-card__feature">5 poziomów intensywności niszczenia</div>
+                        <div class="inator-card__feature">Kompaktowy rozmiar ułatwiający przenoszenie</div>
+                        <div class="inator-card__feature">Wzmocniona obudowa odporna na Agenta P</div>
+                    </div>
+                    <div class="inator-card__footer">
+                        <span class="inator-card__price">19999 złotych</span>
+                        <a href="#" class="button button--secondary button--small">Dodaj do koszyka</a>
+                    </div>
+                </div>
+                
+                <!-- Inator 6 -->
+                <div id="weather-inator" class="inator-card inator-card--destruction">
+                    <div class="inator-card__header">
+                        <h3 class="inator-card__title">Pogodynator</h3>
+                        <span class="inator-card__category">Destrukcja</span>
+                    </div>
+                    <div class="inator-card__image inator-card__image--weather"></div>
+                    <p class="inator-card__description">
+                        Kontroluje pogodę! Idealne rozwiązanie, gdy chcesz zepsuć piknik swojego brata lub 
+                        stworzyć burzę na niebie podczas swoich złowrogich monologów.
+                    </p>
+                    <div class="inator-card__features">
+                        <div class="inator-card__feature">Możliwość wywołania deszczu, śniegu lub wiatru</div>
+                        <div class="inator-card__feature">Precyzyjne targetowanie obszaru</div>
+                        <div class="inator-card__feature">Wodoodporna obudowa (na wszelki wypadek)</div>
+                    </div>
+                    <div class="inator-card__footer">
+                        <span class="inator-card__price">14999 złotych</span>
+                        <a href="#" class="button button--secondary button--small">Dodaj do koszyka</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inator-special">
+        <div class="inator-special__container">
+            <h2 class="section-title">Inator miesiąca</h2>
+            <div class="inator-special__content">
+                <div class="inator-special__image"></div>
+                <div class="inator-special__info">
+                    <h3 class="inator-special__title">Self-Destruct-Inator</h3>
+                    <p class="inator-special__description">
+                        Nasz najnowszy -Inator miesiąca to rewolucyjny Self-Destruct-Inator! Urządzenie to automatycznie 
+                        niszczy się na komendę głosową lub przy najmniejszym ruchu Agenta P. Dzięki temu nie musisz 
+                        już martwić się przypadkowym zniszczeniem swoich złowieszczych planów - to się stanie automatycznie!
+                    </p>
+                    <div class="inator-special__features">
+                        <div class="inator-special__feature">
+                            <span class="inator-special__feature-icon">⚡</span>
+                            <span class="inator-special__feature-text">Autodestrukcja w 3 sekundy</span>
+                        </div>
+                        <div class="inator-special__feature">
+                            <span class="inator-special__feature-icon">🔥</span>
+                            <span class="inator-special__feature-text">Dołączony efekt wybuchu z dymem</span>
+                        </div>
+                        <div class="inator-special__feature">
+                            <span class="inator-special__feature-icon">🔊</span>
+                            <span class="inator-special__feature-text">Odtwarza dramatyczną muzykę podczas niszczenia</span>
+                        </div>
+                    </div>
+                    <div class="inator-special__action">
+                        <span class="inator-special__price">Tylko 4999 złotych</span>
+                        <a href="#" class="button">Zamów teraz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="main-footer__container">
+            <div class="main-footer__logo">
+                <a href="index.html">Doofenshmirtz Evil Incorporated</a>
+                <p>Żaden Agent P nie został skrzywdzony podczas tworzenia tej strony.</p>
+            </div>
+            <div class="main-footer__links">
+                <h3>Przydatne linki</h3>
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="about.html">O firmie</a></li>
+                    <li><a href="inators.html">Inatory</a></li>
+                </ul>
+            </div>
+            <div class="main-footer__contact">
+                <h3>Kontakt</h3>
+                <p>Doofenshmirtz Evil Inc.</p>
+                <p>Wieżowiec DEI, Okręg Trzech Stanów</p>
+                <p>Tel: 555-EVIL</p>
+                <p>Email: evil@doofenshmirtz.com</p>
+            </div>
+        </div>
+        <div class="main-footer__copyright">
+            <p>&copy; 2025 Doofenshmirtz Evil Incorporated. Wszelkie prawa zastrzeżone, zwłaszcza do Okręgu Trzech Stanów.</p>
+        </div>
+    </footer>
+
+    <!-- Skrypty JS dla PWA -->
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

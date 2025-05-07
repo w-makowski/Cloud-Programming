@@ -1,0 +1,56 @@
+// Header
+.main-header {
+    background-color: $tertiary-color;
+    color: $light-color;
+    padding: $section-spacing 0;
+    text-align: center;
+    
+    &__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 $content-padding;
+    }
+    
+    &__title {
+      font-size: 3rem;
+      margin-bottom: $base-spacing;
+      text-shadow: 2px 2px 0 $tertiary-color;
+      
+    }
+    
+    &__subtitle {
+      font-size: 1.2rem;
+      margin-bottom: $content-padding * 2;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      gap: $content-padding;
+
+    }
+  }
+  
+  .page-header {
+    background-color: lighten($primary-color, 10%);
+    color: $light-color;
+    padding: $section-spacing 0;
+    
+    &__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 $content-padding;
+      text-align: center;
+    }
+    
+    &__title {
+      margin-bottom: $base-spacing * 2;
+    }
+    
+    &__description {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }

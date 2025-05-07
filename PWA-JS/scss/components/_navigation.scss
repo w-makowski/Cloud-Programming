@@ -1,0 +1,209 @@
+.main-nav {
+  background-color: $tertiary-color;
+  padding: $content-padding 0;
+  box-shadow: $box-shadow;
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  
+  &__container {
+    @extend %flex-center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $content-padding;
+    
+    @include respond-to(sm) {
+      padding: 0 $base-spacing;
+    }
+  }
+  
+  &__logo {
+    font-family: $main-font;
+    font-size: 1.8rem;
+    color: $light-color;
+    text-decoration: none;
+    font-weight: bold;
+    
+    @include respond-to(sm) {
+      font-size: 1.5rem;
+    }
+    
+    span {
+      color: $secondary-color;
+    }
+    
+    &:hover {
+      @include evil-pulse(1.05);
+    }
+  }
+  
+  &__menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $light-color;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    p {
+      font-family: $main-font;
+    }
+    
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+  
+  &__menu-wrapper {
+    @include respond-to(md) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: $tertiary-color;
+      padding: $content-padding;
+      box-shadow: $box-shadow;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+      z-index: $z-header + 1;
+      
+      &.active {
+        right: 0;
+      }
+    }
+  }
+  
+  &__menu {
+    @extend %flex-center;
+    list-style-type: none;
+    
+    @include respond-to(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    
+    li {
+      margin-left: $content-padding;
+      
+      @include respond-to(md) {
+        margin-left: 0;
+        margin-bottom: $content-padding;
+        width: 100%;
+      }
+      
+      a {
+        color: $light-color;
+        text-decoration: none;
+        padding: $base-spacing;
+        border-radius: $border-radius;
+        @include transition;
+        
+        @include respond-to(md) {
+          display: block;
+          padding: $base-spacing;
+        }
+        
+        &:hover {
+          background-color: rgba($light-color, 0.1);
+        }
+        
+        &.active {
+          background-color: $secondary-color;
+          color: $dark-color;
+        }
+      }
+    }
+  }
+  
+  &__close {
+    display: none;
+    position: absolute;
+    top: $base-spacing;
+    right: $base-spacing;
+    background: none;
+    border: none;
+    color: $light-color;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+  
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($dark-color, 0.5);
+    z-index: $z-header;
+    
+    @include respond-to(md) {
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+// Responsywne przyciski
+%button-base {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $border-radius;
+  @include transition;
+  
+  @include respond-to(sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button {
+  @extend %button-base;
+  
+  &--primary {
+    @include button-style($primary-color, $light-color, darken($primary-color, 10%));
+  }
+  
+  &--secondary {
+    @include button-style($secondary-color, $dark-color, darken($secondary-color, 10%));
+  }
+  
+  &--small {
+    padding: $base-spacing ($base-spacing * 1.5);
+    font-size: 0.8rem;
+    
+    @include respond-to(sm) {
+      padding: $base-spacing;
+      font-size: 0.9rem;
+    }
+  }
+  
+  &--large {
+    padding: ($base-spacing * 2) ($base-spacing * 4);
+    font-size: 1.2rem;
+    
+    @include respond-to(sm) {
+      padding: $base-spacing * 1.5;
+      font-size: 1.1rem;
+    }
+  }
+  
+  // Wyjątek dla przycisków w kontenerach flex/grid
+  &--inline {
+    @include respond-to(sm) {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}

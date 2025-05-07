@@ -1,0 +1,236 @@
+// About History
+.about-history {
+  padding: $section-spacing 0;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $content-padding;
+    
+    @include respond-to(sm) {
+      padding: 0 $base-spacing;
+    }
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $content-padding * 2;
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+      gap: $content-padding;
+    }
+  }
+  
+  &__text {
+    p {
+      margin-bottom: $content-padding;
+      font-size: 1.1rem;
+      
+      @include respond-to(sm) {
+        margin-bottom: $base-spacing;
+      }
+    }
+  }
+  
+  &__event {
+    display: flex;
+    margin-bottom: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__year {
+    font-weight: bold;
+    color: $primary-color;
+    min-width: 60px;
+    padding-right: $base-spacing;
+  }
+  
+  &__description {
+    position: relative;
+    padding-left: $content-padding;
+    padding-bottom: $content-padding;
+    border-left: 2px solid $secondary-color;
+    
+    @include respond-to(sm) {
+      padding-left: $base-spacing;
+      padding-bottom: $base-spacing;
+    }
+    
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: $secondary-color;
+      border-radius: 50%;
+      left: -7px;
+      top: 5px;
+    }
+    
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+// About Founder
+.about-founder {
+  padding: $section-spacing 0;
+  background-color: $light-color;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $content-padding;
+    
+    @include respond-to(sm) {
+      padding: 0 $base-spacing;
+    }
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $content-padding * 2;
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+      gap: $content-padding;
+    }
+  }
+  
+  &__image {
+    height: 100%;
+    min-height: 400px;
+    background-color: lighten($primary-color, 40%);
+    border-radius: $border-radius-large;
+    background-image: url('../images/dundersztyc-2.jpeg');
+    background-size: cover;
+    background-position: center;
+    
+    @include respond-to(md) {
+      min-height: 300px;
+      margin-bottom: $content-padding;
+    }
+    
+    @include respond-to(sm) {
+      min-height: 250px;
+    }
+  }
+  
+  &__name {
+    color: $primary-color;
+    margin-bottom: $base-spacing;
+  }
+  
+  &__position {
+    color: $secondary-color;
+    font-weight: bold;
+    margin-bottom: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+    }
+  }
+  
+  &__bio {
+    p {
+      margin-bottom: $content-padding;
+      
+      @include respond-to(sm) {
+        margin-bottom: $base-spacing;
+      }
+    }
+  }
+  
+  &__quote {
+    margin-top: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-top: $base-spacing;
+    }
+  }
+}
+
+// About Facility
+.about-facility {
+  padding: $section-spacing 0;
+  background-color: rgba($primary-color, 0.05);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $content-padding;
+    
+    @include respond-to(sm) {
+      padding: 0 $base-spacing;
+    }
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $content-padding * 2;
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+      gap: $content-padding;
+    }
+  }
+  
+  &__info {
+    p {
+      margin-bottom: $content-padding;
+      font-size: 1.1rem;
+      
+      @include respond-to(sm) {
+        margin-bottom: $base-spacing;
+      }
+    }
+  }
+  
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $base-spacing;
+    
+    @include respond-to(sm) {
+      gap: $base-spacing / 2;
+    }
+  }
+  
+  &__image {
+    height: 200px;
+    background-color: lighten($primary-color, 40%);
+    border-radius: $border-radius;
+    background-size: cover;
+    background-position: center;
+    
+    @include respond-to(sm) {
+      height: 150px;
+    }
+    
+    // Odnośniki do zdjęć
+    &--lab {
+      background-image: url('../images/doofenshmirtz_evil_lab.png');
+    }
+    
+    &--balcony {
+      background-image: url('../images/doofenshmirtz_evil_balcony.png');
+      grid-column: span 2;
+    }
+    
+    &--trap {
+      background-image: url('../images/doofenshmirtz_evil_trap.png');
+    }
+  }
+}

@@ -1,0 +1,32 @@
+%button-base {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: $border-radius;
+    @include transition;
+  }
+  
+  .button {
+    @extend %button-base;
+    
+    &--primary {
+      @include button-style($primary-color, $light-color, darken($primary-color, 10%));
+
+    }
+    
+    &--secondary {
+      @include button-style($secondary-color, $dark-color, darken($secondary-color, 10%));
+    }
+    
+    &--small {
+      padding: $base-spacing ($base-spacing * 1.5);
+      font-size: 0.8rem;
+    }
+    
+    &--large {
+      padding: ($base-spacing * 2) ($base-spacing * 4);
+      font-size: 1.2rem;
+    }
+
+  }

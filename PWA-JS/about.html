@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O firmie - Doofenshmirtz Evil Inc.</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- PWA Meta Tagi -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-icon-180.png">
+
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#db4938">
+    <meta name="apple-mobile-web-app-title" content="Evil Inc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Apple Splash Screens -->
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1640-2360.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2360-1640.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1488-2266.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2266-1488.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1320-2868.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2868-1320.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1206-2622.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2622-1206.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="main-nav__container">
+          <a href="index.html" class="main-nav__logo">Doofenshmirtz <span>Evil Inc.</span></a>
+          
+          <button class="main-nav__menu-toggle" aria-label="Menu">
+            <p>Menu</p>
+            <!-- <i class="fas fa-bars"></i> -->
+          </button>
+          
+          <div class="main-nav__menu-wrapper">
+            <button class="main-nav__close" aria-label="Zamknij menu">
+              <!-- <i class="fas fa-times"></i> -->
+               <p>X</p>
+            </button>
+            
+            <ul class="main-nav__menu">
+              <li><a href="index.html" class="active">Strona główna</a></li>
+              <li><a href="about.html">O nas</a></li>
+              <li><a href="inators.html">Inatory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-nav__overlay"></div>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header__container">
+            <h1 class="page-header__title">Oto jest spółka Z.Ł.O. Dundersztyca</h1>
+            <p class="page-header__description">
+                Poznaj historię naszej firmy, naszego założyciela i naszą nieustającą walkę z Agentem P.
+            </p>
+        </div>
+    </header>
+
+    <section class="about-history">
+        <div class="about-history__container">
+            <h2 class="section-title">Historia firmy</h2>
+            <div class="about-history__content">
+                <div class="about-history__text">
+                    <p>
+                        Doofenshmirtz Evil Incorporated zostało założone w 1999 roku przez Dr. Heinza Doofenshmirtza, 
+                        gdy postanowił on poświęcić się w pełni swojej pasji - tworzeniu złych wynalazków, które 
+                        mogłyby pomóc mu przejąć kontrolę nad Okręgiem Trzech Stanów.
+                    </p>
+                    <p>
+                        Początkowo firma mieściła się w małym mieszkaniu, ale dzięki niewyjaśnionym funduszom Dr. Doofenshmirtz 
+                        szybko przeniósł się do charakterystycznego, fioletowego wieżowca w kształcie głowy, który do dziś 
+                        jest siedzibą firmy i rozpoznawalnym elementem panoramy miasta.
+                    </p>
+                    <p>
+                        Przez lata firma zmagała się z nieustannymi interwencjami tajnego agenta znanego jako Agent P (dziobak), 
+                        który skutecznie udaremniał większość planów Dr. Doofenshmirtza. Mimo to, firma wciąż się rozwija i 
+                        wprowadza na rynek coraz to nowe Inatory.
+                    </p>
+                </div>
+                <div class="about-history__timeline">
+                    <div class="about-history__event">
+                        <div class="about-history__year">1999</div>
+                        <div class="about-history__description">Założenie Doofenshmirtz Evil Incorporated</div>
+                    </div>
+                    <div class="about-history__event">
+                        <div class="about-history__year">2001</div>
+                        <div class="about-history__description">Budowa charakterystycznego wieżowca</div>
+                    </div>
+                    <div class="about-history__event">
+                        <div class="about-history__year">2005</div>
+                        <div class="about-history__description">Pierwsze spotkanie z Agentem P</div>
+                    </div>
+                    <div class="about-history__event">
+                        <div class="about-history__year">2008</div>
+                        <div class="about-history__description">Stworzenie 100. -Inatora</div>
+                    </div>
+                    <div class="about-history__event">
+                        <div class="about-history__year">2018</div>
+                        <div class="about-history__description">Ekspansja do sąsiednich stanów</div>
+                    </div>
+                    <div class="about-history__event">
+                        <div class="about-history__year">2023</div>
+                        <div class="about-history__description">Rebranding i odświeżenie wizerunku firmy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-founder">
+        <div class="about-founder__container">
+            <h2 class="section-title">O założycielu</h2>
+            <div class="about-founder__content">
+                <div class="about-founder__image"></div>
+                <div class="about-founder__info">
+                    <h3 class="about-founder__name">Dr. Heinz Doofenshmirtz</h3>
+                    <p class="about-founder__position">Założyciel & Zły Naukowiec</p>
+                    <div class="about-founder__bio">
+                        <p>
+                            Dr. Heinz Doofenshmirtz urodził się w małym miasteczku Gimmelshtump w Drusselsteinie. 
+                            Jego dzieciństwo było pełne traumatycznych przeżyć, które ukształtowały jego obecną osobowość 
+                            i ambicje.
+                        </p>
+                        <p>
+                            Zdobył doktorat z "Złej Nauki" na Uniwersytecie w Gimmelshtump, choć krążą plotki, że 
+                            w rzeczywistości kupił dyplom przez internet. Jego pasją jest tworzenie skomplikowanych 
+                            urządzeń z przyrostkiem "-inator", które zazwyczaj mają przywrócić jego godność, zemścić się 
+                            za dawne urazy lub po prostu sprawić, że życie jego brata Rogera będzie nieco trudniejsze.
+                        </p>
+                        <p>
+                            Mimo bycia "złym naukowcem", Dr. Doofenshmirtz jest w gruncie rzeczy wrażliwą osobą, która 
+                            dba o swoją córkę Vanessę i czasami nawiązuje niemal przyjacielską relację ze swoim nemezis, 
+                            Agentem P.
+                        </p>
+                    </div>
+                    <div class="about-founder__quote">
+                        <blockquote>
+                            "Widzisz, Perry Dziobaku, wszystko zaczęło się gdy byłem małym chłopcem..."
+                            <cite>— Dr. Heinz Doofenshmirtz, przed każdym złowieszczym planem</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-facility">
+        <div class="about-facility__container">
+            <h2 class="section-title">Nasza siedziba</h2>
+            <div class="about-facility__content">
+                <div class="about-facility__info">
+                    <p>
+                        Nasza główna siedziba mieści się w charakterystycznym wieżowcu w kształcie głowy 
+                        Dr. Doofenshmirtza. Budynek ten góruje nad panoramą Okręgu Trzech Stanów i jest 
+                        natychmiast rozpoznawalny dzięki swojemu fioletowemu kolorowi oraz charakterystycznemu 
+                        kształtowi.
+                    </p>
+                    <p>
+                        Wewnątrz budynku znajduje się główne laboratorium Dr. Doofenshmirtza, liczne 
+                        pomieszczenia pełne wynalazków, duży balkon do złowrogich monologów oraz sala 
+                        konferencyjna dla spotkań Złych Naukowców z Okręgu Trzech Stanów (L.O.V.E.M.U.F.F.I.N.).
+                    </p>
+                    <p>
+                        Nasza siedziba jest również wyposażona w najnowocześniejsze zabezpieczenia 
+                        (które co prawda nigdy nie powstrzymały Agenta P) oraz system samozniszczenia, 
+                        aktywowany średnio dwa razy w tygodniu.
+                    </p>
+                </div>
+                <div class="about-facility__gallery">
+                    <div class="about-facility__image about-facility__image--balcony"></div>
+                    <div class="about-facility__image about-facility__image--lab"></div>
+                    <div class="about-facility__image about-facility__image--trap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="main-footer__container">
+            <div class="main-footer__logo">
+                <a href="index.html">Doofenshmirtz Evil Incorporated</a>
+                <p>Żaden Agent P nie został skrzywdzony podczas tworzenia tej strony.</p>
+            </div>
+            <div class="main-footer__links">
+                <h3>Przydatne linki</h3>
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="about.html">O firmie</a></li>
+                    <li><a href="inators.html">Inatory</a></li>
+                </ul>
+            </div>
+            <div class="main-footer__contact">
+                <h3>Kontakt</h3>
+                <p>Doofenshmirtz Evil Inc.</p>
+                <p>Wieżowiec DEI, Okręg Trzech Stanów</p>
+                <p>Tel: 555-EVIL</p>
+                <p>Email: evil@doofenshmirtz.com</p>
+            </div>
+        </div>
+        <div class="main-footer__copyright">
+            <p>&copy; 2025 Doofenshmirtz Evil Incorporated. Wszelkie prawa zastrzeżone, zwłaszcza do Okręgu Trzech Stanów.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+// Footer
+.main-footer {
+    background-color: $dark-color;
+    color: $light-color;
+    padding: $section-spacing 0 0;
+    
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 $content-padding;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: $content-padding * 2;
+
+    }
+    
+    &__logo {
+      a {
+        font-family: $main-font;
+        font-size: 1.5rem;
+        color: $light-color;
+        font-weight: bold;
+        margin-bottom: $base-spacing;
+        display: block;
+      }
+      
+      p {
+        opacity: 0.7;
+        font-style: italic;
+      }
+    }
+    
+    &__links {
+      h3 {
+        color: $secondary-color;
+        margin-bottom: $content-padding;
+      }
+      
+      ul {
+        list-style: none;
+        
+        li {
+          margin-bottom: $base-spacing;
+          
+          a {
+            color: $light-color;
+            opacity: 0.7;
+            @include transition;
+            
+            &:hover {
+              opacity: 1;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+    
+    &__contact {
+      h3 {
+        color: $secondary-color;
+        margin-bottom: $content-padding;
+      }
+      
+      p {
+        opacity: 0.7;
+        margin-bottom: $base-spacing;
+      }
+    }
+    
+    &__copyright {
+      background-color: darken($dark-color, 5%);
+      text-align: center;
+      padding: $content-padding 0;
+      margin-top: $section-spacing;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  }

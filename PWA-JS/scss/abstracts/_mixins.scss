@@ -1,0 +1,202 @@
+
+  // Transition mixin
+  @mixin transition($property: all, $duration: 0.4s, $timing: ease) {
+    transition: $property $duration $timing;
+  }
+
+  // Button mixin
+  @mixin button-style($bg-color, $text-color, $hover-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $base-spacing * 1.5 $base-spacing * 3;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-family: $secondary-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include transition;
+
+    &:hover {
+      background-color: $hover-color;
+      transform: translateY(-2px);
+      box-shadow: $box-shadow-hover;
+      color: $text-color;
+    }
+  }
+
+  
+  // Animacja logo
+  @mixin evil-pulse($scale: 1.1) {
+    @keyframes evil-pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale($scale);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    animation: evil-pulse 2s infinite;
+  }
+
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@mixin respond-to($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Nieprawidłowy breakpoint: #{$breakpoint}.";
+  }
+}
+
+@mixin container-responsive {
+  width: 100%;
+  padding-right: $content-padding;
+  padding-left: $content-padding;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include respond-to(lg) {
+    max-width: 960px;
+  }
+  
+  @include respond-to(md) {
+    max-width: 720px;
+  }
+  
+  @include respond-to(sm) {
+    max-width: 540px;
+    padding-right: $base-spacing;
+    padding-left: $base-spacing;
+  }
+}
+
+@mixin grid-responsive($columns: 1fr, $gap: $content-padding) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+    gap: $content-padding;
+  }
+  
+  @include respond-to(sm) {
+    grid-template-columns: 1fr;
+    gap: $base-spacing;
+  }
+}
+
+@mixin responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  gap: $content-padding;
+  
+  &--2col {
+    grid-template-columns: repeat(2, 1fr);
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--3col {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &--4col {
+    grid-template-columns: repeat(4, 1fr);
+    
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Responsywne menu
+@mixin responsive-nav {
+  .main-nav {
+    &__container {
+      flex-wrap: wrap;
+    }
+    
+    &__menu {
+      @include respond-to(md) {
+        flex-direction: column;
+        width: 100%;
+        margin-top: $content-padding;
+        align-items: flex-start;
+        
+        li {
+          margin-left: 0;
+          margin-bottom: $base-spacing;
+          width: 100%;
+          
+          a {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+    
+    &__toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: $light-color;
+      font-size: 1.5rem;
+      cursor: pointer;
+      
+      @include respond-to(md) {
+        display: block;
+      }
+    }
+    
+    &__menu-container {
+      @include respond-to(md) {
+        width: 100%;
+        display: none;
+        
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}

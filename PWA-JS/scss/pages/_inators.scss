@@ -1,0 +1,318 @@
+// Inators Hero
+.inators-hero {
+  padding: $section-spacing 0;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $content-padding;
+    text-align: center;
+    
+    @include respond-to(sm) {
+      padding: 0 $base-spacing;
+    }
+  }
+  
+  &__description {
+    max-width: 800px;
+    margin: 0 auto $section-spacing;
+    font-size: 1.1rem;
+    
+    @include respond-to(md) {
+      margin-bottom: $content-padding;
+    }
+    
+    @include respond-to(sm) {
+      font-size: 1rem;
+    }
+  }
+  
+  &__categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $base-spacing;
+    margin-bottom: $section-spacing;
+    
+    @include respond-to(md) {
+      margin-bottom: $content-padding;
+    }
+  }
+  
+  &__category {
+    background-color: rgba($primary-color, 0.1);
+    border: 2px solid $primary-color;
+    border-radius: $border-radius;
+    padding: $base-spacing $content-padding;
+    cursor: pointer;
+    @include transition;
+    
+    @include respond-to(sm) {
+      padding: $base-spacing / 2 $base-spacing;
+      font-size: 0.9rem;
+    }
+    
+    &:hover {
+      background-color: rgba($primary-color, 0.2);
+    }
+    
+    &.active {
+      background-color: $primary-color;
+      color: $light-color;
+    }
+  }
+}
+
+// Inators Grid
+.inators-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $content-padding * 2;
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+    gap: $content-padding;
+  }
+}
+
+// Inator Card
+.inator-card {
+  @extend %inator-card;
+  
+  @include respond-to(sm) {
+    padding: $base-spacing;
+  }
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  &__title {
+    color: $primary-color;
+    margin-bottom: 0;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing / 2;
+    }
+  }
+  
+  &__category {
+    font-size: 0.8rem;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    padding: $base-spacing / 2 $base-spacing;
+    border-radius: $border-radius;
+  }
+  
+  &__image {
+    width: 100%;
+    height: 200px;
+    background-color: lighten($primary-color, 40%);
+    border-radius: $border-radius;
+    margin-bottom: $content-padding;
+    background-size: cover;
+    background-position: center;
+    
+    @include respond-to(sm) {
+      height: 180px;
+      margin-bottom: $base-spacing;
+    }
+    
+    // Zdjęcia
+    &--destruction {
+      background-image: url('../images/destruction-inator.png');
+    }
+    
+    &--weather {
+      background-image: url('../images/weather-inator.png');
+    }
+    
+    &--giant {
+      background-image: url('../images/wielkoinator.jpg');
+    }
+    
+    &--mindcontrol {
+      background-image: url('../images/mind-control-inator.png');
+    }
+    
+    &--disappear {
+      background-image: url('../images/invisi-nator.jpg');
+    }
+    
+    &--teleport {
+      background-image: url('../images/teleport-inator.jpg');
+    }
+  }
+  
+  &__description {
+    margin-bottom: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+    }
+  }
+  
+  &__features {
+    margin-bottom: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+    }
+  }
+  
+  &__feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: $base-spacing;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing / 2;
+    }
+    
+    &:before {
+      content: "•";
+      color: $secondary-color;
+      font-size: 1.5rem;
+      margin-right: $base-spacing;
+      
+      @include respond-to(sm) {
+        margin-right: $base-spacing / 2;
+      }
+    }
+  }
+  
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include respond-to(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $base-spacing;
+    }
+  }
+  
+  &__price {
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+// Inator Special
+.inator-special {
+  padding: $section-spacing 0;
+  background-color: rgba($primary-color, 0.05);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $content-padding;
+    
+    @include respond-to(sm) {
+      padding: 0 $base-spacing;
+    }
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $content-padding * 2;
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+      gap: $content-padding;
+    }
+  }
+  
+  &__image {
+    height: 400px;
+    background-color: lighten($primary-color, 40%);
+    border-radius: $border-radius-large;
+    background-image: url('../images/self-destruction-inator.png');
+    background-size: cover;
+    background-position: center;
+    
+    @include respond-to(md) {
+      height: 300px;
+    }
+    
+    @include respond-to(sm) {
+      height: 250px;
+    }
+  }
+  
+  &__title {
+    color: $primary-color;
+    margin-bottom: $base-spacing;
+    font-size: 2rem;
+    
+    @include respond-to(sm) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  &__description {
+    margin-bottom: $content-padding;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+      font-size: 1rem;
+    }
+  }
+  
+  &__features {
+    margin-bottom: $content-padding;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing;
+    }
+  }
+  
+  &__feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: $base-spacing;
+    
+    @include respond-to(sm) {
+      margin-bottom: $base-spacing / 2;
+    }
+  }
+  
+  &__feature-icon {
+    font-size: 1.5rem;
+    margin-right: $base-spacing;
+    
+    @include respond-to(sm) {
+      font-size: 1.2rem;
+      margin-right: $base-spacing / 2;
+    }
+  }
+  
+  &__price {
+    display: block;
+    font-weight: bold;
+    color: $secondary-color;
+    font-size: 1.3rem;
+    margin-bottom: $base-spacing;
+    
+    @include respond-to(sm) {
+      font-size: 1.2rem;
+    }
+  }
+}

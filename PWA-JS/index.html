@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doofenshmirtz Evil Inc.</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-icon-180.png">
+
+    <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#db4938">
+    <meta name="apple-mobile-web-app-title" content="PWA PIAC">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1640-2360.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2360-1640.jpg" media="(device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1488-2266.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2266-1488.jpg" media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1320-2868.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2868-1320.jpg" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1206-2622.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2622-1206.jpg" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="images/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+  </head>
+  <body>
+
+    <nav class="main-nav">
+        <div class="main-nav__container">
+          <a href="index.html" class="main-nav__logo">Doofenshmirtz <span>Evil Inc.</span></a>
+          
+          <button class="main-nav__menu-toggle" aria-label="Menu">
+            <p>Menu</p>
+            <!-- <i class="fas fa-bars"></i> -->
+          </button>
+          
+          <div class="main-nav__menu-wrapper">
+            <button class="main-nav__close" aria-label="Zamknij menu">
+              <!-- <i class="fas fa-times"></i> -->
+               <p>X</p>
+            </button>
+            
+            <ul class="main-nav__menu">
+              <li><a href="index.html" class="active">Strona główna</a></li>
+              <li><a href="about.html">O nas</a></li>
+              <li><a href="inators.html">Inatory</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-nav__overlay"></div>
+    </nav>
+      
+
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h2 class="hero__title">Witamy w Doofenshmirtz Evil Incorporated!</h2>
+                <p class="hero__description">
+                    Jesteśmy wiodącą firmą w dziedzinie złych wynalazków, specjalizującą się w projektowaniu 
+                    i budowaniu urządzeń z przyrostkiem "-inator". Naszą misją jest przejęcie władzy nad 
+                    całym Okręgiem Trzech Stanów!
+                </p>
+                <a href="#mission" class="button button--primary">Poznaj naszą misję</a>
+                <!-- Przycisk instalacji PWA -->
+                <button id="install-button" class="button button--secondary">Zainstaluj aplikację</button>
+            </div>
+            <div class="hero__image-container">
+                <div class="hero__image hero__image--building"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="mission">
+        <div class="mission__container">
+            <h2 class="section-title">Nasza Misja</h2>
+            <div class="mission__content">
+                <div class="mission__text">
+                    <p>
+                        W Doofenshmirtz Evil Incorporated wierzymy, że świat może być lepszym miejscem... 
+                        dla <em>nas</em>, gdy przejmiemy kontrolę nad Okręgiem Trzech Stanów! Każdego dnia 
+                        pracujemy nad nowymi "-inatorami", które pomogą nam osiągnąć ten cel.
+                    </p>
+                    <p>
+                        Nasz założyciel, Dr. Heinz Doofenshmirtz, poświęcił swoje życie na tworzenie 
+                        wynalazków, które mają na celu zemstę za dzieciństwo w Gimmelshtump oraz pokonanie 
+                        swojego nemezis - Agenta P.
+                    </p>
+                    <blockquote class="mission__quote">
+                        "Kiedy byłem małym chłopcem, nikt nie przychodził na moje urodziny... Dlatego 
+                        zbuduję Urodziny-Ruinator!"
+                        <cite>— Dr. Heinz Doofenshmirtz</cite>
+                    </blockquote>
+                </div>
+                <div class="mission__image mission__image--doof"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-inators">
+        <div class="featured-inators__container">
+            <h2 class="section-title">Popularne Inatory</h2>
+            <div class="featured-inators__grid">
+                <!-- Inator 1 -->
+                <div class="featured-inators__card">
+                    <h3>Przenoszator</h3>
+                    <div class="featured-inators__card-image featured-inators__card-image--teleport"></div>
+                    <p class="featured-inators__card-description">
+                        Teleportuje przedmioty z jednego miejsca do drugiego, idealny do kradzieży
+                        smacznych ciast z piekarni!
+                    </p>
+                    <a href="inators.html#teleport-inator" class="button button--secondary button--small">Szczegóły</a>
+                </div>
+
+                <!-- Inator 2 -->
+                <div class="featured-inators__card">
+                    <h3>Znikator</h3>
+                    <div class="featured-inators__card-image featured-inators__card-image--disappear"></div>
+                    <p class="featured-inators__card-description">
+                        Sprawia, że rzeczy znikają! Niestety czasami trudno je odnaleźć później...
+                    </p>
+                    <a href="inators.html#disappear-inator" class="button button--secondary button--small">Szczegóły</a>
+                </div>
+
+                <!-- Inator 3 -->
+                <div class="featured-inators__card">
+                    <h3>Wielkoinator</h3>
+                    <div class="featured-inators__card-image featured-inators__card-image--giant"></div>
+                    <p class="featured-inators__card-description">
+                        Powiększa przedmioty do gigantycznych rozmiarów! Próbowałeś kiedyś walczyć z
+                        gigantycznym pączkiem?
+                    </p>
+                    <a href="inators.html#giant-inator" class="button button--secondary button--small">Szczegóły</a>
+                </div>
+            </div>
+            <div class="featured-inators__more">
+                <a href="inators.html" class="button button--primary">Zobacz wszystkie Inatory</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-evil">
+        <div class="join-evil__container">
+            <h2 class="section-title section-title--light">Dołącz do naszej organiz(ł)acji!</h2>
+            <p class="join-evil__description">
+                Szukamy utalentowanych złych naukowców, ochroniarzy, asystentów laboratoryjnych 
+                i osób odpowiedzialnych za sprzątanie po wybuchach. Oferujemy konkurencyjne wynagrodzenie, 
+                darmowe przekąski i możliwość obserwowania klęski Agenta P!
+            </p>
+            <div class="join-evil__benefits">
+                <div class="join-evil__benefit">
+                    <h3>Złe benefity</h3>
+                    <ul>
+                        <li>Codzienna dawka złośliwego śmiechu</li>
+                        <li>Zniżki na Inatory</li>
+                        <li>Firmowe imprezy z motywem "Przejęcie władzy"</li>
+                    </ul>
+                </div>
+                <div class="join-evil__benefit">
+                    <h3>Środowisko pracy</h3>
+                    <ul>
+                        <li>Wspaniały widok z penthousa na Okręg Trzech Stanów</li>
+                        <li>Tajne przejścia w całym budynku</li>
+                        <li>Przycisk autodestrukcji w każdym pokoju</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="button button--primary button--large">Aplikuj teraz!</a>
+        </div>
+    </section>
+    
+    <footer class="main-footer">
+        <div class="main-footer__container">
+            <div class="main-footer__logo">
+                <a href="index.html">Doofenshmirtz Evil Incorporated</a>
+                <p>Zło z pewnym stylem™</p>
+            </div>
+            <div class="main-footer__links">
+                <h3>Przydatne linki</h3>
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="about.html">O firmie</a></li>
+                    <li><a href="inators.html">Inatory</a></li>
+                </ul>
+            </div>
+            <div class="main-footer__contact">
+                <h3>Kontakt</h3>
+                <p>Doofenshmirtz Evil Inc.</p>
+                <p>Wieżowiec DEI, Okręg Trzech Stanów</p>
+                <p>Tel: 555-EVIL</p>
+                <p>Email: evil@doofenshmirtz.com</p>
+            </div>
+        </div>
+        <div class="main-footer__copyright">
+            <p>&copy; 2025 Doofenshmirtz Evil Incorporated. Wszelkie prawa zastrzeżone, zwłaszcza do Okręgu Trzech Stanów.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

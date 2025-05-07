@@ -1,0 +1,27 @@
+
+// Placeholdery flexboxa
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Placeholder karty inatora
+%inator-card {
+  background-color: $light-color;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow;
+  padding: $content-padding;
+  margin-bottom: $section-spacing;
+  @include transition;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+    transform: translateY(-5px);
+  }
+}

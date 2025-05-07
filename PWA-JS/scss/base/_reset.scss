@@ -1,0 +1,36 @@
+// Reset CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: $secondary-font;
+    line-height: 1.6;
+    color: $text-color;
+    background-color: $background-color;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul, ol {
+    list-style-position: inside;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    @include transition;
+    
+    &:hover {
+      color: darken($primary-color, 15%);
+    }
+  }
